@@ -23,14 +23,6 @@ function App() {
     // </div>
     <div className='flex md:w-96 overflow-x-scroll'>
       <CardContainer title='Blog'>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
-        <p className=' text-lg text-red-500 bg-slate-600 mb-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ipsa nulla nihil, rerum accusamus cupiditate provident temporibus? Ad possimus eveniet iusto voluptates laborum non assumenda quis, iure quod voluptatem! Quasi!</p>
       </CardContainer>
     </div>
   );
