@@ -7,7 +7,7 @@ interface Props {
     deleteCard : () => void;
 }
 
-const ComponentName: React.FC<Props> = ({ children,  title, onAddRowCard, deleteCard}) => {
+const ColumContainer: React.FC<Props> = ({ children,  title, onAddRowCard, deleteCard}) => {
     
     const [editTitle, setEditTitle] = useState(false);
     const [newTitle, setNewTitle] = useState(title);
@@ -23,7 +23,7 @@ const ComponentName: React.FC<Props> = ({ children,  title, onAddRowCard, delete
     }
     
     return (
-        <div className='p-3 bg-[#101204] md:w-[272px] rounded-xl'>
+        <div className='p-3 bg-[#101204] md:w-[272px] rounded-xl h-fit'>
             <div className='flex justify-between items-center'>
                 {editTitle ? (
                     <input
@@ -53,4 +53,4 @@ const ComponentName: React.FC<Props> = ({ children,  title, onAddRowCard, delete
     );
 };
 
-export default ComponentName;
+export default ColumContainer;
