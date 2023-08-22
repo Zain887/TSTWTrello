@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Content: React.FC<Props> = ({ content }) => {
-  const [popUp, setPopUp] = useState(true);
+  const [popUp, setPopUp] = useState(false);
 
   const [cardColmTitle, setCardColmTitle] = useState(false);
   const [cardColmEdit, setCardColmEdit] = useState<string>('ToDoListDataWrite');
