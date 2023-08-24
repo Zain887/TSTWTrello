@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 interface Props {
+    itemsData: string
     closePopUp: () => void;
 }
 
-const PopUpTodoList: React.FC<Props> = ({ closePopUp }) => {
+const PopUpTodoList: React.FC<Props> = ({ closePopUp, itemsData }) => {
     const [isChecked, setIsChecked] = useState(false);
     const [newLists, setNewLists] = useState<{ label: string; isChecked: boolean }[]>([]);
     const [showLabelInput, setShowLabelInput] = useState(false);

@@ -8,6 +8,7 @@ interface Props {
 
 interface Card {
   content: string;
+  items: { itemsData: string }[];
 }
 
 interface Column {
@@ -18,7 +19,16 @@ interface Column {
 const columns: Column[] = [
   {
     title: 'Column',
-    cards: []
+    cards: [
+      {
+        content: '', 
+        items: [
+          {
+            itemsData: ''
+          }
+        ]
+      }
+    ]
   },
 ];
 
@@ -36,7 +46,16 @@ const MainComHolder: React.FC<Props> = (props) => {
   };
   const addNewColumnHandler = (index: number) => {
     const updatedColumns = [...colums];
-    updatedColumns[index].cards.push({ content: 'new content' });
+    updatedColumns[index].cards.push(
+        { 
+          content: 'new content', 
+          items: [
+            { 
+              itemsData: '' 
+            }
+          ] 
+        }
+      );
     setColums(updatedColumns);
   };
   return (
@@ -54,7 +73,8 @@ const MainComHolder: React.FC<Props> = (props) => {
               ))}
             </ColumContainer>
           ))}
-          <button className=' bg-blue-500 w-[179px] px-6 h-12 rounded-lg font-bold hover:text-orange-600 hover:bg-black' onClick={handleAddCard}>Add Another List</button>
+          <button className=' bg-blue-500 w-[179px] px-6 h-12 rounded-lg font-bold hover:text-orange-600 hover:bg-black' 
+            onClick={handleAddCard}>Add Another List</button>
         </div>
       </div>
     </>

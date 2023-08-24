@@ -42,7 +42,7 @@ const Content: React.FC<Props> = ({ content }) => {
         )}
       </div>
       {popUp && (
-        <PopUpTodoList closePopUp={close} />
+        <PopUpTodoList closePopUp={close} itemsData='' />
       )}
     </>
   );
