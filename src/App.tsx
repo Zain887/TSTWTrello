@@ -1,10 +1,12 @@
 import './App.css';
-import MainComHolder from './components/MainComHolder';
+import Board from './components/Board';
+import MainComHolder from './oldComponents/MainComHolder';
 
 function App() {
   return (
     <>
-      <MainComHolder/>
+      {/* <MainComHolder/> */}
+      <Board></Board>
     </>
   );
 }
