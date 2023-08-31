@@ -9,7 +9,7 @@ interface Member {
 }
 
 interface Todo {
-	lable: string;
+	label: string;
 	checked: boolean;
 	edit: boolean;
 }
@@ -42,7 +42,7 @@ const TrelloBoard: React.FC<Props> = () => {
 					content: 'Type Your Description Title Here',
 					todos: [
 						{
-							lable: 'TaskToDo',
+							label: 'TaskToDo',
 							checked: false,
 							edit: false,
 						},
@@ -55,7 +55,7 @@ const TrelloBoard: React.FC<Props> = () => {
 	const addNewToDoHandler = (columnIndex: number, cardIndex: number) => {
 		const newColumns = [...columns];
 		newColumns[columnIndex].cards[cardIndex].todos.push({
-			lable: 'TaskToDo',
+			label: 'TaskToDo',
 			checked: false,
 			edit: false,
 		});
@@ -71,7 +71,7 @@ const TrelloBoard: React.FC<Props> = () => {
 			content: 'Add Your Content Here',
 			todos: [
 				{
-					lable: 'TaskToDo',
+					label: 'TaskToDo',
 					checked: false,
 					edit: false,
 				},
@@ -92,7 +92,7 @@ const TrelloBoard: React.FC<Props> = () => {
 					content: 'Type Your Description Title Here',
 					todos: [
 						{
-							lable: 'TaskToDo',
+							label: 'TaskToDo',
 							checked: false,
 							edit: false,
 						},
@@ -114,7 +114,7 @@ const TrelloBoard: React.FC<Props> = () => {
 
 	const updateTodoTitleHandler = (todoIndex: number, cardIndex: number, columnIndex: number) => {
 		const newColumns = [...columns];
-		if (newColumns[columnIndex].cards[cardIndex].todos[todoIndex].lable === 'TaskToDo') {
+		if (newColumns[columnIndex].cards[cardIndex].todos[todoIndex].label === 'TaskToDo') {
 			newColumns[columnIndex].cards[cardIndex].todos[todoIndex].edit = true;
 			setColumns(newColumns);
 		}
@@ -126,7 +126,7 @@ const TrelloBoard: React.FC<Props> = () => {
 	};
 	const todoTitleEdit = (todoIndex: number, cardIndex: number, columnIndex: number, event: React.ChangeEvent<HTMLInputElement>) => {
 		const newColumns = [...columns];
-		newColumns[columnIndex].cards[cardIndex].todos[todoIndex].lable = event.target.value;
+		newColumns[columnIndex].cards[cardIndex].todos[todoIndex].label = event.target.value;
 		setColumns(newColumns);
 	};
 	const updateColumTitle = (columnIndex: number) => {
@@ -243,14 +243,14 @@ const TrelloBoard: React.FC<Props> = () => {
 															className='w-full bg-white rounded-lg p-2'
 															type='text'
 															placeholder='Enter label'
-															value={todo.lable}
+															value={todo.label}
 															onBlur={() => toDoTitleUpdated(todoIndex, cardIndex, columnIndex)}
 															onChange={(event) => todoTitleEdit(todoIndex, cardIndex, columnIndex, event)}
 														/>
 													) : (
 														<label className={`font-light capitalize text-xl text-white ${todo.checked === true ? 'line-through' : ''}`} onClick={() => updateTodoTitleHandler(todoIndex, cardIndex, columnIndex)}>
-															{todo.lable}
-															{todo.lable !== 'TaskToDo' ? (
+															{todo.label}
+															{todo.label !== 'TaskToDo' ? (
 																<span className='text-base font-bold relative'>
 																	...TMList
 																	<div className='md:w-[113px] absolute top-full left-0 bg-white border border-gray-300 shadow-md p-2 rounded-lg'>
